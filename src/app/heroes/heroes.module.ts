@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { MaterialModule } from '../material/material.module';
 import { AddComponent } from './pages/add/add.component';
 import { SearchComponent } from './pages/search/search.component';
-import { HeroeComponent } from './pages/heroe/heroe.component';
+import { HeroComponent } from './pages/heroe/hero.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
 
@@ -11,10 +13,15 @@ import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
   declarations: [
     AddComponent,
     SearchComponent,
-    HeroeComponent,
+    HeroComponent,
     HomeComponent,
     HeroesListComponent,
   ],
-  imports: [CommonModule, HeroesRoutingModule],
+  imports: [
+    CommonModule,
+    FlexLayoutModule,
+    MaterialModule,
+    HeroesRoutingModule,
+  ],
 })
 export class HeroesModule {}
